@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerPhysics : MonoBehaviour
 {
-    public Transform pivot;
-    Vector3 currentEulerAngles;
+    public GameObject target;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,12 +15,6 @@ public class PlayerPhysics : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Vector3 screen_mouse_pos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.y);
-        //Vector3 mouse_pos = Camera.main.ScreenToWorldPoint(screen_mouse_pos);
-
-        //Vector3 diff = mouse_pos - transform.position;
-
-        //transform.rotation = Quaternion.LookRotation(diff, Vector3.up);
         Vector3 WorldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         Vector3 Difference = WorldPoint - transform.position;
